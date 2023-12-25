@@ -8,6 +8,7 @@ import Qualification from './components/qualification/Qualification';
 import Contact from './components/contact/Contact';
 import Footer from './components/footer/Footer';
 import ScrollUp from './components/scrollup/ScrollUp';
+import Project from './components/projects/Project';
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
       <Skills />
       <Services />
       {/* <Qualification /> */}
-      {/* projects pending */}
+      <Project />
       <Contact />
       <Footer />
       <ScrollUp />
