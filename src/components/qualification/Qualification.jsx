@@ -21,6 +21,7 @@ const Qualification = () => {
                 ? "qualification__button qualification__active button--flex"
                 : "qualification__button button--flex"
             }
+            onClick={() => toggleTab(1)}
           >
             <i className="uil uil-graduation-cap qualification__icon"></i>
             Education
@@ -32,6 +33,7 @@ const Qualification = () => {
                 ? "qualification__button qualification__active button--flex"
                 : "qualification__button button--flex"
             }
+            onClick={() => toggleTab(2)}
           >
             <i className="uil uil-briefcase-alt qualification__icon"></i>
             Experience
@@ -55,12 +57,11 @@ const Qualification = () => {
                 <div className="qualification__calendar">
                   <i className="uil uil-bx-calendar-alt"></i> 2021 - Present
                 </div>
-
-                <div>
+              </div>
+              <div>
                   <span className="qualification__rounder"></span>
                   <span className="qualification__line"></span>
                 </div>
-              </div>
             </div>
 
             <div className="qualification__data">
@@ -91,11 +92,11 @@ const Qualification = () => {
                 <div className="qualification__calendar">
                   <i className="uil uil-bx-calendar-alt"></i> 2018 - 2020
                 </div>
+              </div>
 
-                <div>
+              <div>
                   <span className="qualification__rounder"></span>
                   <span className="qualification__line"></span>
-                </div>
               </div>
             </div>
 
@@ -117,6 +118,8 @@ const Qualification = () => {
                 </div>
               </div>
             </div>
+
+
           </div>
 
           <div
@@ -135,11 +138,10 @@ const Qualification = () => {
                 <div className="qualification__calendar">
                   <i className="uil uil-bx-calendar-alt"></i> 2021 - Present
                 </div>
-
-                <div>
+              </div>
+              <div>
                   <span className="qualification__rounder"></span>
                   <span className="qualification__line"></span>
-                </div>
               </div>
             </div>
 
@@ -167,13 +169,13 @@ const Qualification = () => {
                 <div className="qualification__calendar">
                   <i className="uil uil-bx-calendar-alt"></i> 2018 - 2020
                 </div>
-
-                <div>
+              </div>
+              <div>
                   <span className="qualification__rounder"></span>
                   <span className="qualification__line"></span>
                 </div>
-              </div>
             </div>
+
           </div>
         </div>
       </div>
