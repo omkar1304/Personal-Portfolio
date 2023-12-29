@@ -22,8 +22,8 @@ const Header = () => {
   return (
     <header className="header">
       <nav className="nav container">
-        <a href="index.html" className="nav__logo">
-          Smith
+        <a href="/" className="nav__logo">
+          Omkar
         </a>
 
         <div className={toggle ? "nav__menu show-menu" : "nav__menu"}>
@@ -31,7 +31,7 @@ const Header = () => {
 
             <li className="nav__item">
               <a
-                href="#home"
+                href="/"
                 className={
                   activeNav === "#home" ? "nav__link active-link" : "nav__link"
                 }

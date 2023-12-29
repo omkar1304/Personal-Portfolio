@@ -5,7 +5,7 @@ import WorkItems from "./WorkItems";
 const Projects = () => {
   return (
     <div>
-      <div className="work__conatiner containe grid">
+      <div className="work__conatiner container grid">
         {projectsData.map((item) => {
           return <WorkItems item={item} key={item.id} />;
         })}

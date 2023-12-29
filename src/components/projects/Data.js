@@ -1,41 +1,40 @@
-import Work1 from '../../assets/work1.jpg'
-import Work2 from '../../assets/work2.jpg'
-import Work3 from '../../assets/work3.jpg'
-import Work4 from '../../assets/work4.jpg'
-import Work5 from '../../assets/work5.jpg'
+import Work1 from '../../assets/projects/jotion.jpg'
+import Work2 from '../../assets/projects/threads.jpg'
+import Work3 from '../../assets/projects/movix.jpg'
+import Work4 from '../../assets/projects/studybud.jpg'
+
 
 
 export const projectsData = [
   {
     id: 1,
     image: Work1,
-    title: "Web design",
-    category: "web",
+    title: "Jotion",
+    github: "https://github.com/omkar1304/Jotion-using-NextJS",
+    link: "https://jotionnote.vercel.app/"
   },
   {
     id: 2,
     image: Work2,
-    title: "App movil",
-    category: "app",
+    title: "Threads",
+    github: "https://github.com/omkar1304/Threads-using-NextJS",
+    link: "https://threads-connect.vercel.app/"
   },
   {
     id: 3,
     image: Work3,
-    title: "Brand design",
-    category: "design",
+    title: "Movix",
+    github: "https://github.com/omkar1304/Movix-using-React-Django",
+    link: "https://movixplay.netlify.app/"
   },
   {
     id: 4,
     image: Work4,
-    title: "App movil",
-    category: "app",
+    title: "StudyBud",
+    github: "https://github.com/omkar1304/StudyBud-using-Django",
+    link: "https://studybudweb.pythonanywhere.com/"
   },
-  {
-    id: 5,
-    image: Work5,
-    title: "Web design",
-    category: "web",
-  },
+
 ]
 
 export const projectsNav = [

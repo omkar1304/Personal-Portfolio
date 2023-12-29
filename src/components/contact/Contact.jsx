@@ -37,6 +37,7 @@ const Contact = () => {
         <div className="contact__content">
           <h3 className="contact__title">Talk to me</h3>
           <div className="contact__info">
+
             <div className="contact__card">
               <i className="bx bx-mail-send contact__card-icon"></i>
               <h3 className="contact__card-title">Email</h3>
@@ -45,6 +46,8 @@ const Contact = () => {
               </span>
               <a
                 href="mailto:omkarpedamkar2@gmail.com"
+                target="_blank"
+                rel="noreferrer"
                 className="contact__button"
               >
                 Write me{" "}
@@ -56,7 +59,7 @@ const Contact = () => {
               <i className="bx bxl-whatsapp contact__card-icon"></i>
               <h3 className="contact__card-title">Whatsapp</h3>
               <span className="contact__card-data">7875871590</span>
-              <a href="https://wa.me/7875871590" className="contact__button">
+              <a href="https://wa.me/7875871590" target="_blank" rel="noreferrer" className="contact__button">
                 Write me{" "}
                 <i className="bx bx-bx-right-arrow-alt contact__button-icon"></i>
               </a>
@@ -64,16 +67,19 @@ const Contact = () => {
 
             <div className="contact__card">
               <i className="bx bxl-github contact__card-icon"></i>
-              <h3 className="contact__card-title">Messenger</h3>
+              <h3 className="contact__card-title">Github</h3>
               <span className="contact__card-data">omkar1304</span>
               <a
                 href="https://github.com/omkar1304"
+                target="_blank"
+                rel="noreferrer"
                 className="contact__button"
               >
                 Write me{" "}
                 <i className="bx bx-bx-right-arrow-alt contact__button-icon"></i>
               </a>
             </div>
+
           </div>
         </div>
 

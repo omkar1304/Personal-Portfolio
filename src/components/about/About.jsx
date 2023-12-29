@@ -1,7 +1,7 @@
 import React from "react";
 import "./about.css";
-import AboutImg from "../../assets/about.jpg";
-import CV from "../../assets/John-Cv.pdf";
+import AboutImg from "../../assets/portfolio.jpg";
+import CV from "../../assets/Resume.pdf";
 import Info from "./Info";
 
 const About = () => {
@@ -16,12 +16,15 @@ const About = () => {
         <div className="about__data">
           <Info />
           <p className="about__description">
-            Frontend developer, I create web pages with UI / UX user interface,
-            I have years of experience and many clients are happy with the
-            projects carried out.
+            I'm a passionate software developer based in Mumbai, proficient in
+            Python, NextJS, Express, ReactJS, React-Redux, and MongoDB. With a
+            solid foundation in frontend technologies and backend development,
+            my coursework in Data Structures, Algorithms, OOPS, and DBMS equips
+            me to craft efficient and innovative solutions. Let's collaborate to
+            turn ideas into seamless, functional realities
           </p>
           <a download="" href={CV} className="button button--flex">
-            Download CV
+            Download Resume
             <svg
               class="button__icon"
               xmlns="http://www.w3.org/2000/svg"

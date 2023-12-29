@@ -2,19 +2,39 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="icon" id="favicon" href="./logowhite.png" sizes="32x32" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
-      content="Web site created using create-react-app"
+      content="My Portfolio"
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 
-    <title>Portfolio</title>
+    <title>Omkar</title>
+
+    <script>
+      // Detect system theme and set favicon accordingly
+      function setFavicon() {
+        const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+        const favicon = document.getElementById('favicon');
+  
+        if (favicon) {
+          favicon.href = darkModeMediaQuery.matches
+            ? './logowhite.png'
+            : './logoblack.png';
+        }
+      }
+  
+      setFavicon();
+  
+      // Listen for changes in system theme and update favicon accordingly
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', setFavicon);
+    </script>
+
   </head>
   <body>
 

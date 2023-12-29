@@ -41,6 +41,7 @@ const Qualification = () => {
         </div>
 
         <div className="qualification__sections">
+
           <div
             className={
               toggleState === 1
@@ -50,12 +51,15 @@ const Qualification = () => {
           >
             <div className="qualification__data">
               <div>
-                <h3 className="qualification__title">Web Design</h3>
+                <h3 className="qualification__title">B.Tech in CS </h3>
                 <span className="qualification__subtitle">
-                  Spain - Institue
+                  Mumbai University
                 </span>
                 <div className="qualification__calendar">
-                  <i className="uil uil-bx-calendar-alt"></i> 2021 - Present
+                   2017 - 2021
+                </div>
+                <div className="qualification__calendar">
+                 9.1 CGPA
                 </div>
               </div>
               <div>
@@ -73,24 +77,30 @@ const Qualification = () => {
               </div>
 
               <div>
-                <h3 className="qualification__title">Art Director</h3>
+                <h3 className="qualification__title">HSC</h3>
                 <span className="qualification__subtitle">
-                  Spain - Institue
+                Maharashtra State Board
                 </span>
                 <div className="qualification__calendar">
-                  <i className="uil uil-bx-calendar-alt"></i> 2020 - 2021
+                   2016 - 2017 
+                </div>
+                <div className="qualification__calendar">
+                 75.85 <i class="uil uil-percentage"></i>
                 </div>
               </div>
             </div>
 
             <div className="qualification__data">
               <div>
-                <h3 className="qualification__title">Web Development</h3>
+                <h3 className="qualification__title">SSC</h3>
                 <span className="qualification__subtitle">
-                  Spain - Institue
+                Maharashtra State Board
                 </span>
                 <div className="qualification__calendar">
-                  <i className="uil uil-bx-calendar-alt"></i> 2018 - 2020
+                   2014 - 2015 
+                </div>
+                <div className="qualification__calendar">
+                 93.40 <i class="uil uil-percentage"></i>
                 </div>
               </div>
 
@@ -100,24 +110,6 @@ const Qualification = () => {
               </div>
             </div>
 
-            <div className="qualification__data">
-              <div></div>
-
-              <div>
-                <span className="qualification__rounder"></span>
-                <span className="qualification__line"></span>
-              </div>
-
-              <div>
-                <h3 className="qualification__title">UX Expert</h3>
-                <span className="qualification__subtitle">
-                  Spain - Institue
-                </span>
-                <div className="qualification__calendar">
-                  <i className="uil uil-bx-calendar-alt"></i> 2017 - 2018
-                </div>
-              </div>
-            </div>
 
 
           </div>
@@ -131,12 +123,12 @@ const Qualification = () => {
           >
             <div className="qualification__data">
               <div>
-                <h3 className="qualification__title">Product Designer</h3>
+                <h3 className="qualification__title">System Engineer</h3>
                 <span className="qualification__subtitle">
-                  Microsoft - Spain
+                  Infosys
                 </span>
                 <div className="qualification__calendar">
-                  <i className="uil uil-bx-calendar-alt"></i> 2021 - Present
+                 Jun 2021 - Jan 2024
                 </div>
               </div>
               <div>
@@ -145,7 +137,7 @@ const Qualification = () => {
               </div>
             </div>
 
-            <div className="qualification__data">
+            {/* <div className="qualification__data">
               <div></div>
 
               <div>
@@ -174,9 +166,10 @@ const Qualification = () => {
                   <span className="qualification__rounder"></span>
                   <span className="qualification__line"></span>
                 </div>
-            </div>
+            </div> */}
 
           </div>
+
         </div>
       </div>
     </section>
