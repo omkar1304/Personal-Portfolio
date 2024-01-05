@@ -50,12 +50,11 @@
   font-size: var(--tiny-font-size);
 }
 
-.skills__card{
+.skills__card {
   cursor: pointer;
   transition: 0.3s;
-  
 }
-.skills__card:hover{
+.skills__card:hover {
   transform: scale(1.2);
 }
 
@@ -63,6 +62,12 @@
   object-fit: contain;
   width: 90px;
   height: 90px;
+  background-color: transparent;
+  filter: grayscale(80%);
+}
+
+.skills__card-image:hover{
+  filter: grayscale(0%);
 }
 
 .skills__card-text {
@@ -95,7 +100,7 @@
     grid-template-columns: repeat(2, 90px);
     row-gap: 2rem;
   }
-  .skills__card-image{
+  .skills__card-image {
     object-fit: contain;
     width: 70px;
     height: 70px;
@@ -104,7 +109,7 @@
 
 /* For small devices */
 @media screen and (max-width: 350px) {
-  .skills__card-image{
+  .skills__card-image {
     object-fit: contain;
     width: 60px;
     height: 60px;
