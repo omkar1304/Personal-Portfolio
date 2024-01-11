@@ -10,7 +10,7 @@ const Skills = () => {
         <span className='section__subtitle'>My technical knowledge</span>
         <div className='skills__container container grid'>
             {skillsData.map((item) => {
-              return <div key={item.id} className='skills__card'>
+              return <div key={item.id} className='skills__card' data-aos="zoom-in" data-aos-delay="100">
                 <img src={item.image} alt={item.name} className='skills__card-image'/>
                 <h4 className='skills__card-text'>{item.name}</h4>
               </div>

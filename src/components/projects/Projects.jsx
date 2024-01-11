@@ -1,5 +1,5 @@
 import React from "react";
-import { projectsData, projectsNav } from "./Data";
+import { projectsData } from "./Data";
 import WorkItems from "./WorkItems";
 
 const Projects = () => {
@@ -7,7 +7,7 @@ const Projects = () => {
     <div>
       <div className="work__conatiner container grid">
         {projectsData.map((item) => {
-          return <WorkItems item={item} key={item.id} />;
+          return <WorkItems item={item} key={item.id}/>;
         })}
       </div>
     </div>

@@ -16,7 +16,7 @@ const Services = () => {
 
       <div className="services__container container grid">
 
-        <div className="services__content">
+        <div className="services__content" data-aos="fade-right">
           <div>
             <i className="uil uil-web-grid services__icon"></i>
             <h3 className="services__title">Frontend <br/>Wizard</h3>
@@ -70,7 +70,7 @@ const Services = () => {
           </div>
         </div>
 
-        <div className="services__content">
+        <div className="services__content" data-aos="zoom-in">
           <div>
             <i className="uil uil-arrow services__icon"></i>
             <h3 className="services__title">Backend <br /> Maestro</h3>
@@ -124,7 +124,7 @@ const Services = () => {
           </div>
         </div>
 
-        <div className="services__content">
+        <div className="services__content" data-aos="fade-left">
           <div>
             <i className="uil uil-edit services__icon"></i>
             <h3 className="services__title">DSA <br /> Alchemist</h3>
