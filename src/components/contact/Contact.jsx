@@ -38,7 +38,7 @@ const Contact = () => {
           <h3 className="contact__title">Talk to me</h3>
           <div className="contact__info">
 
-            <div className="contact__card" data-aos="fade-right">
+            <div className="contact__card" data-aos="fade-down">
               <i className="bx bx-mail-send contact__card-icon"></i>
               <h3 className="contact__card-title">Email</h3>
               <span className="contact__card-data">
@@ -55,7 +55,7 @@ const Contact = () => {
               </a>
             </div>
 
-            <div className="contact__card" data-aos="fade-right" data-aos-delay="300">
+            <div className="contact__card" data-aos="fade-down" data-aos-delay="300">
               <i className="bx bxl-whatsapp contact__card-icon"></i>
               <h3 className="contact__card-title">Whatsapp</h3>
               <span className="contact__card-data">7875871590</span>
@@ -65,7 +65,7 @@ const Contact = () => {
               </a>
             </div>
 
-            <div className="contact__card" data-aos="fade-right" data-aos-delay="600">
+            <div className="contact__card" data-aos="fade-down" data-aos-delay="600">
               <i className="bx bxl-github contact__card-icon"></i>
               <h3 className="contact__card-title">Github</h3>
               <span className="contact__card-data">omkar1304</span>
@@ -83,7 +83,7 @@ const Contact = () => {
           </div>
         </div>
 
-        <div className="contact__content"  data-aos="fade-left" data-aos-delay="800">
+        <div className="contact__content"  data-aos="fade-up" data-aos-delay="800">
           <h3 className="contact__title">Write me your project</h3>
 
           <form ref={form} onSubmit={sendEmail} className="contact__form">
