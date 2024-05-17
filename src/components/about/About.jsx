@@ -11,17 +11,25 @@ const About = () => {
       <span className="section__subtitle">My Introduction</span>
 
       <div className="about__container container grid">
-        <img src={AboutImg} alt="avatar" className="about__img" data-aos="fade-down"/>
+        <img
+          src={AboutImg}
+          alt="avatar"
+          className="about__img"
+          data-aos="fade-down"
+        />
 
         <div className="about__data">
           <Info />
           <p className="about__description">
-            I'm a passionate software developer based in Mumbai, proficient in
-            Python, NextJS, Express, ReactJS, React-Redux, and MongoDB. With a
-            solid foundation in frontend technologies and backend development,
-            my coursework in Data Structures, Algorithms, OOPS, and DBMS equips
-            me to craft efficient and innovative solutions. Let's collaborate to
-            turn ideas into seamless, functional realities
+            As a Full Stack Developer with 3 years of experience, I specialize
+            in creating responsive web applications using HTML, CSS, JavaScript,
+            TypeScript, and frameworks like React.js and Next.js. I excel in
+            backend development with Node.js, Express.js, and MongoDB, ensuring
+            robust server-side solutions. My skills include state management
+            with React-Redux, efficient coding with knowledge of Data Structures
+            and Algorithms, and streamlined styling with Tailwind CSS. thrive in
+            dynamic environments, collaborating with cross-functional teams,
+            leading projects, and engaging with clients to implement feedback.
           </p>
           <a download="" href={CV} className="button button--flex">
             Download Resume
