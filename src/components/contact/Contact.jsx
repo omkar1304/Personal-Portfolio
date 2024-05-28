@@ -55,7 +55,7 @@ const Contact = () => {
               </a>
             </div>
 
-            <div className="contact__card" data-aos="fade-down" data-aos-delay="300">
+            <div className="contact__card" data-aos="fade-down" data-aos-delay="100">
               <i className="bx bxl-whatsapp contact__card-icon"></i>
               <h3 className="contact__card-title">Whatsapp</h3>
               <span className="contact__card-data">7875871590</span>
@@ -65,7 +65,7 @@ const Contact = () => {
               </a>
             </div>
 
-            <div className="contact__card" data-aos="fade-down" data-aos-delay="600">
+            <div className="contact__card" data-aos="fade-down" data-aos-delay="200">
               <i className="bx bxl-github contact__card-icon"></i>
               <h3 className="contact__card-title">Github</h3>
               <span className="contact__card-data">omkar1304</span>
