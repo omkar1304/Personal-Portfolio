@@ -13,7 +13,11 @@ const Qualification = () => {
       <h2 className="section__title">Qualification</h2>
       <span className="section__subtitle">My Personal Journey</span>
 
-      <div className="qualification__container container" data-aos="zoom-in" data-aos-delay="300">
+      <div
+        className="qualification__container container"
+        data-aos="zoom-in"
+        data-aos-delay="300"
+      >
         <div className="qualification__tabs">
           <div
             className={
@@ -24,7 +28,7 @@ const Qualification = () => {
             onClick={() => toggleTab(1)}
           >
             <i className="uil uil-graduation-cap qualification__icon"></i>
-            Education
+            Experience
           </div>
 
           <div
@@ -36,12 +40,11 @@ const Qualification = () => {
             onClick={() => toggleTab(2)}
           >
             <i className="uil uil-briefcase-alt qualification__icon"></i>
-            Experience
+            Education
           </div>
         </div>
 
         <div className="qualification__sections">
-
           <div
             className={
               toggleState === 1
@@ -51,90 +54,17 @@ const Qualification = () => {
           >
             <div className="qualification__data">
               <div>
-                <h3 className="qualification__title">B.Tech in CS </h3>
-                <span className="qualification__subtitle">
-                  Mumbai University
-                </span>
+                <h3 className="qualification__title">System Engineer</h3>
+                <span className="qualification__subtitle">Infosys</span>
                 <div className="qualification__calendar">
-                   2017 - 2021
-                </div>
-                <div className="qualification__calendar">
-                 9.1 CGPA
+                  Jun 2021 - Jan 2024
                 </div>
               </div>
-              <div>
-                  <span className="qualification__rounder"></span>
-                  <span className="qualification__line"></span>
-                </div>
-            </div>
-
-            <div className="qualification__data">
-              <div></div>
-
               <div>
                 <span className="qualification__rounder"></span>
                 <span className="qualification__line"></span>
               </div>
-
-              <div>
-                <h3 className="qualification__title">HSC</h3>
-                <span className="qualification__subtitle">
-                Maharashtra State Board
-                </span>
-                <div className="qualification__calendar">
-                   2016 - 2017 
-                </div>
-                <div className="qualification__calendar">
-                 75.85 <i class="uil uil-percentage"></i>
-                </div>
-              </div>
             </div>
-
-            <div className="qualification__data">
-              <div>
-                <h3 className="qualification__title">SSC</h3>
-                <span className="qualification__subtitle">
-                Maharashtra State Board
-                </span>
-                <div className="qualification__calendar">
-                   2014 - 2015 
-                </div>
-                <div className="qualification__calendar">
-                 93.40 <i class="uil uil-percentage"></i>
-                </div>
-              </div>
-
-              <div>
-                  <span className="qualification__rounder"></span>
-                  <span className="qualification__line"></span>
-              </div>
-            </div>
-
-          </div>
-
-          <div
-            className={
-              toggleState === 2
-                ? "qualification__content qualification__content-active"
-                : "qualification__content"
-            }
-          >
-            <div className="qualification__data">
-              <div>
-                <h3 className="qualification__title">System Engineer</h3>
-                <span className="qualification__subtitle">
-                  Infosys
-                </span>
-                <div className="qualification__calendar">
-                 Jun 2021 - Jan 2024
-                </div>
-              </div>
-              <div>
-                  <span className="qualification__rounder"></span>
-                  <span className="qualification__line"></span>
-              </div>
-            </div>
-
 
             <div className="qualification__data">
               <div></div>
@@ -148,7 +78,8 @@ const Qualification = () => {
                 <h3 className="qualification__title">Software Engineer</h3>
                 <span className="qualification__subtitle">NeoSOFT</span>
                 <div className="qualification__calendar">
-                  <i className="uil uil-bx-calendar-alt"></i> Feb 2024 - Apr 2024
+                  <i className="uil uil-bx-calendar-alt"></i> Feb 2024 - Apr
+                  2024
                 </div>
               </div>
             </div>
@@ -156,19 +87,80 @@ const Qualification = () => {
             <div className="qualification__data">
               <div>
                 <h3 className="qualification__title">Full Stack Developer</h3>
-                <span className="qualification__subtitle">CenturyIQ Solutions</span>
+                <span className="qualification__subtitle">
+                  CenturyIQ Solutions
+                </span>
                 <div className="qualification__calendar">
                   <i className="uil uil-bx-calendar-alt"></i> May 2024 - Present
                 </div>
               </div>
               <div>
-                  <span className="qualification__rounder"></span>
-                  <span className="qualification__line"></span>
-                </div>
+                <span className="qualification__rounder"></span>
+                <span className="qualification__line"></span>
+              </div>
             </div>
-
           </div>
 
+          <div
+            className={
+              toggleState === 2
+                ? "qualification__content qualification__content-active"
+                : "qualification__content"
+            }
+          >
+            <div className="qualification__data">
+              <div>
+                <h3 className="qualification__title">B.Tech in CS </h3>
+                <span className="qualification__subtitle">
+                  Mumbai University
+                </span>
+                <div className="qualification__calendar">2017 - 2021</div>
+                <div className="qualification__calendar">9.1 CGPA</div>
+              </div>
+              <div>
+                <span className="qualification__rounder"></span>
+                <span className="qualification__line"></span>
+              </div>
+            </div>
+
+            <div className="qualification__data">
+              <div></div>
+
+              <div>
+                <span className="qualification__rounder"></span>
+                <span className="qualification__line"></span>
+              </div>
+
+              <div>
+                <h3 className="qualification__title">HSC</h3>
+                <span className="qualification__subtitle">
+                  Maharashtra State Board
+                </span>
+                <div className="qualification__calendar">2016 - 2017</div>
+                <div className="qualification__calendar">
+                  75.85 <i class="uil uil-percentage"></i>
+                </div>
+              </div>
+            </div>
+
+            <div className="qualification__data">
+              <div>
+                <h3 className="qualification__title">SSC</h3>
+                <span className="qualification__subtitle">
+                  Maharashtra State Board
+                </span>
+                <div className="qualification__calendar">2014 - 2015</div>
+                <div className="qualification__calendar">
+                  93.40 <i class="uil uil-percentage"></i>
+                </div>
+              </div>
+
+              <div>
+                <span className="qualification__rounder"></span>
+                <span className="qualification__line"></span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
