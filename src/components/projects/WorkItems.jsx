@@ -3,7 +3,7 @@ import React from "react";
 const WorkItems = ({ item }) => {
   return (
     <div className="work__card" key={item.id}  data-aos="zoom-in" data-aos-delay="50">
-      <img src={item.image} alt="project-image" className="work__img" />
+      <img src={item.image} alt="Project title" className="work__img" />
       <div className="work__description">
         <h3 className="work__title">{item.title}</h3>
         <div className="work__button">
