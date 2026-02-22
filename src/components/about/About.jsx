@@ -21,7 +21,7 @@ const About = () => {
         <div className="about__data">
           <Info />
           <p className="about__description">
-            As a Full Stack Developer with 3 years of experience, I specialize
+            As a Full Stack Developer with 4+ years of experience, I specialize
             in creating responsive web applications using HTML, CSS, JavaScript,
             TypeScript, and frameworks like React.js and Next.js. I excel in
             backend development with Node.js, Express.js, and MongoDB, ensuring

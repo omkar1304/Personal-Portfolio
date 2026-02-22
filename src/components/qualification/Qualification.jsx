@@ -91,7 +91,7 @@ const Qualification = () => {
                   CenturyIQ Solutions
                 </span>
                 <div className="qualification__calendar">
-                  <i className="uil uil-bx-calendar-alt"></i> May 2024 - Present
+                  <i className="uil uil-bx-calendar-alt"></i> Jun 2024 - Present
                 </div>
               </div>
               <div>
