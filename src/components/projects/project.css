@@ -27,10 +27,12 @@
 }
 
 .work__card {
-  background-color: var(--container-color);
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: var(--card-bg);
+  backdrop-filter: var(--card-backdrop);
+  border: var(--card-border);
+  box-shadow: var(--card-shadow);
   padding: 1.25rem;
-  border-radius: 1rem;
+  border-radius: var(--card-radius);
   transition: 0.4s;
   cursor: pointer;
 }
@@ -43,7 +45,7 @@
 .work__img {
   width: 295px;
   height: 200px;
-  border-radius: 1rem;
+  border-radius: var(--card-radius);
   margin-bottom: var(--mb-1);
 }
 

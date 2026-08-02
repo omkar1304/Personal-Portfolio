@@ -6,9 +6,13 @@
 
 .services__content {
   position: relative;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  background-color: var(--container-color);
+  border: var(--card-border);
+  background-color: var(--card-bg);
+  backdrop-filter: var(--card-backdrop);
+  box-shadow: var(--card-shadow);
+  border-radius: var(--card-radius);
   padding: 6rem 0 2rem 2.5rem;
+  transition: var(--transition-speed);
 }
 
 .services__icon {
@@ -66,9 +70,11 @@
   width: 500px;
   height: fit-content;
   position: relative;
-  background-color: var(--container-color);
+  background-color: var(--card-bg);
+  backdrop-filter: var(--card-backdrop);
+  border: var(--card-border);
   padding: 2.5rem 2.5rem 2.5rem;
-  border-radius: 1.5rem;
+  border-radius: calc(var(--card-radius) * 1.5);
   margin: auto;
 }
 

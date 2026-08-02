@@ -1,22 +1,38 @@
 /*=============== GOOGLE FONTS ===============*/
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Bricolage+Grotesque:opsz,wght@12..96,400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&family=Sora:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500;600;700&display=swap");
 
 /*=============== VARIABLES CSS ===============*/
 :root {
-  --header-height: 3rem;
+  --header-height: 3.5rem;
 
-  /*========== Colors ==========*/
-  /*Color mode HSL(hue, saturation, lightness)*/
-  --hue: 0;
-  --sat: 0%;
-  --title-color: hsl(var(--hue), var(--sat), 20%);
-  --title-color-dark: hsl(var(--hue), var(--sat), 0%);
-  --text-color: hsl(var(--hue), var(--sat), 46%);
-  --body-color: hsl(var(--hue), var(--sat), 98%);
-  --container-color: #fff;
+  /*========== Colors (default = Obsidian Minimal theme) ==========*/
+  --title-color: #f4f4f6;
+  --title-color-dark: #ffffff;
+  --text-color: #a1a1ab;
+  --body-color: #0a0a0c;
+  --container-color: #131316;
+  --accent: #818cf8;
+  --accent-2: #c7d2fe;
+  --gradient-1: #818cf8;
+  --gradient-2: #0a0a0c;
+
+  /*========== Structural (overridden per theme) ==========*/
+  --card-border: 1px solid rgba(255, 255, 255, 0.08);
+  --card-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
+  --card-radius: 0.75rem;
+  --card-bg: var(--container-color);
+  --card-backdrop: none;
+  --img-ring: rgba(255, 255, 255, 0.12);
+  --heading-transform: none;
+  --heading-tracking: normal;
+  --bg-decoration: none;
+  --transition-speed: 0.3s;
+  --button-radius: 1rem;
 
   /*========== Font and typography ==========*/
-  --body-font: "Poppins", sans-serif;
+  --body-font: "Inter", sans-serif;
+  --heading-font: "Bricolage Grotesque", sans-serif;
+  --mono-font: "JetBrains Mono", monospace;
 
   /*.5rem = 8px | 1rem = 16px ...*/
   --big-font-size: 3.5rem;
@@ -48,6 +64,27 @@
   --z-tooltip: 10;
   --z-fixed: 100;
   --z-modal: 1000;
+}
+
+/*=============== LIGHT MODE ===============*
+  Applies only when no showcase [data-theme] is active — the 10 dark
+  themes are dark-only and always win the cascade since their rules
+  are declared later, in themes.css. */
+[data-mode="light"] {
+  --title-color: #18181b;
+  --title-color-dark: #000000;
+  --text-color: #52525b;
+  --body-color: #fafafa;
+  --container-color: #ffffff;
+  --accent: #4f46e5;
+  --accent-2: #6366f1;
+
+  --card-border: 1px solid rgba(0, 0, 0, 0.08);
+  --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  --card-bg: var(--container-color);
+  --card-backdrop: none;
+  --img-ring: rgba(0, 0, 0, 0.08);
+  --bg-decoration: none;
 }
 
 /* Responsive typography */
@@ -85,13 +122,19 @@ textarea {
 body {
   background-color: var(--body-color);
   color: var(--text-color);
+  background-image: var(--bg-decoration);
+  background-attachment: fixed;
+  transition: background-color var(--transition-speed), color var(--transition-speed);
 }
 
 h1,
 h2,
 h3 {
   color: var(--title-color);
+  font-family: var(--heading-font);
   font-weight: var(--font-semi-bold);
+  text-transform: var(--heading-transform);
+  letter-spacing: var(--heading-tracking);
 }
 
 ul {
@@ -152,8 +195,9 @@ img {
   background-color: var(--title-color);
   color: var(--container-color);
   padding: 1.25rem 2rem;
-  border-radius: 1rem;
+  border-radius: var(--button-radius);
   font-weight: var(--font-medium);
+  transition: var(--transition-speed);
 }
 
 .button:hover {

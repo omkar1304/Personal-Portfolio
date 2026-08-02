@@ -21,15 +21,20 @@ const About = () => {
         <div className="about__data">
           <Info />
           <p className="about__description">
-            As a Full Stack Developer with 4+ years of experience, I specialize
-            in creating responsive web applications using HTML, CSS, JavaScript,
-            TypeScript, and frameworks like React.js and Next.js. I excel in
-            backend development with Node.js, Express.js, and MongoDB, ensuring
-            robust server-side solutions. My skills include state management
-            with React-Redux, efficient coding with knowledge of Data Structures
-            and Algorithms, and streamlined styling with Tailwind CSS. thrive in
-            dynamic environments, collaborating with cross-functional teams,
-            leading projects, and engaging with clients to implement feedback.
+            Full Stack Developer with 5+ years of experience designing,
+            building, and scaling enterprise web applications using React.js,
+            Next.js, Node.js, Express.js, and MongoDB (MERN Stack). Proven track
+            record spanning cloud infrastructure management, frontend
+            performance optimization, and end-to-end platform ownership,
+            including independently architecting an AI-powered workflow
+            automation platform that replaced a paid third-party SaaS
+            subscription and saved the company approximately $10,000 annually.
+            Currently leads and mentors a team of 4-6 engineers as Senior
+            Developer, driving production releases, architecture decisions, and
+            cross-functional delivery across QA, Product, and DevOps. Brings
+            strong fintech domain expertise from infrastructure work on a
+            regulated banking platform and ongoing development of an enterprise
+            Sales CRM used company-wide.
           </p>
           <a download="" href={CV} className="button button--flex">
             Download Resume

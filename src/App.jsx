@@ -1,4 +1,5 @@
 import './App.css';
+import './themes.css';
 import Header from './components/header/Header';
 import Home from './components/home/Home';
 import About from './components/about/About';
@@ -9,12 +10,13 @@ import Contact from './components/contact/Contact';
 import Footer from './components/footer/Footer';
 import ScrollUp from './components/scrollup/ScrollUp';
 import Project from './components/projects/Project';
+import ThemeControls from './components/thememenu/ThemeControls';
 
 function App() {
   return (
     <>
     <Header />
-    <main className='main'>  
+    <main className='main'>
       <Home />
       <About />
       <Skills />
@@ -24,6 +26,7 @@ function App() {
       <Contact />
       <Footer />
       <ScrollUp />
+      <ThemeControls />
     </main>
     </>
   );

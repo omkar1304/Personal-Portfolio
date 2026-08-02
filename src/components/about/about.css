@@ -17,11 +17,14 @@
 }
 
 .about__box {
-  background-color: var(--container-color);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 0.75rem;
+  background-color: var(--card-bg);
+  backdrop-filter: var(--card-backdrop);
+  border: var(--card-border);
+  box-shadow: var(--card-shadow);
+  border-radius: var(--card-radius);
   text-align: center;
   padding: 1rem 1.25rem;
+  transition: var(--transition-speed);
 }
 
 .about__icon {

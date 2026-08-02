@@ -1,0 +1,552 @@
+/*=============================================================
+  THEME SYSTEM
+  10 distinct dark-theme design concepts driven by [data-theme]
+  on <html>. Each block sets color/typography/structural custom
+  properties from App.css; a handful of themes add standout
+  layout treatments (bento spans, glass blur, scanlines, etc.)
+  scoped to their own selector so the underlying markup never
+  changes between themes.
+===============================================================*/
+
+@keyframes blink-caret {
+  0%, 45% { opacity: 1; }
+  50%, 95% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes aurora-drift {
+  0% { background-position: 0% 0%, 100% 100%, 50% 50%; }
+  50% { background-position: 30% 20%, 70% 80%, 40% 60%; }
+  100% { background-position: 0% 0%, 100% 100%, 50% 50%; }
+}
+
+/*=============== 1. OBSIDIAN MINIMAL ===============*/
+[data-theme="obsidian-minimal"] {
+  --title-color: #f4f4f6;
+  --title-color-dark: #ffffff;
+  --text-color: #98989f;
+  --body-color: #0a0a0c;
+  --container-color: #131316;
+  --accent: #818cf8;
+  --accent-2: #c7d2fe;
+
+  --card-border: none;
+  --card-shadow: none;
+  --card-bg: transparent;
+  --card-backdrop: none;
+  --card-radius: 0.375rem;
+  --img-ring: rgba(255, 255, 255, 0.1);
+  --heading-transform: none;
+  --heading-tracking: -0.01em;
+  --bg-decoration: none;
+  --button-radius: 0.4rem;
+
+  --body-font: "Inter", sans-serif;
+  --heading-font: "Bricolage Grotesque", sans-serif;
+  --mono-font: "JetBrains Mono", monospace;
+}
+[data-theme="obsidian-minimal"] .about__box,
+[data-theme="obsidian-minimal"] .services__content,
+[data-theme="obsidian-minimal"] .work__card,
+[data-theme="obsidian-minimal"] .contact__card,
+[data-theme="obsidian-minimal"] .skills__content {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 0;
+}
+[data-theme="obsidian-minimal"] .section__title {
+  position: relative;
+  padding-bottom: 0.85rem;
+}
+[data-theme="obsidian-minimal"] .section__title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2.5rem;
+  height: 2px;
+  background: var(--accent);
+}
+
+/*=============== 2. NEON TERMINAL ===============*/
+[data-theme="neon-terminal"] {
+  --title-color: #6ee7a0;
+  --title-color-dark: #baf7cf;
+  --text-color: #7fae8c;
+  --body-color: #000000;
+  --container-color: #0a0f0a;
+  --accent: #22e07a;
+  --accent-2: #5eead4;
+
+  --card-border: 1px dashed rgba(110, 231, 160, 0.3);
+  --card-shadow: 0 0 18px rgba(34, 224, 122, 0.08);
+  --card-bg: rgba(15, 25, 17, 0.6);
+  --card-backdrop: none;
+  --card-radius: 0.25rem;
+  --img-ring: rgba(110, 231, 160, 0.25);
+  --heading-transform: uppercase;
+  --heading-tracking: 0.06em;
+  --button-radius: 0.25rem;
+  --bg-decoration: repeating-linear-gradient(
+      0deg,
+      rgba(34, 224, 122, 0.025) 0px,
+      rgba(34, 224, 122, 0.025) 1px,
+      transparent 1px,
+      transparent 3px
+    );
+
+  --body-font: "JetBrains Mono", monospace;
+  --heading-font: "JetBrains Mono", monospace;
+  --mono-font: "IBM Plex Mono", monospace;
+}
+[data-theme="neon-terminal"] .nav__logo::before {
+  content: "~/";
+  opacity: 0.55;
+}
+[data-theme="neon-terminal"] .nav__logo::after {
+  content: "_";
+  animation: blink-caret 1s step-end infinite;
+  margin-left: 2px;
+}
+[data-theme="neon-terminal"] .section__title::before {
+  content: "// ";
+  color: var(--accent);
+  opacity: 0.7;
+}
+[data-theme="neon-terminal"] .button {
+  background-color: var(--accent);
+  color: #001a08;
+  border: 1px solid var(--accent);
+}
+[data-theme="neon-terminal"] .button:hover {
+  background-color: transparent;
+  color: var(--accent);
+}
+[data-theme="neon-terminal"] .work__item:hover {
+  background-color: var(--accent);
+  color: #001a08;
+}
+
+/*=============== 3. LIQUID GLASS ===============*/
+[data-theme="liquid-glass"] {
+  --title-color: #f2f0ff;
+  --title-color-dark: #ffffff;
+  --text-color: #b3aed6;
+  --body-color: #0d0e1a;
+  --container-color: #171a2c;
+  --accent: #a78bfa;
+  --accent-2: #f472b6;
+
+  --card-border: 1px solid rgba(255, 255, 255, 0.12);
+  --card-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+  --card-bg: rgba(255, 255, 255, 0.045);
+  --card-backdrop: blur(20px) saturate(160%);
+  --card-radius: 1.5rem;
+  --img-ring: rgba(255, 255, 255, 0.18);
+  --heading-transform: none;
+  --heading-tracking: -0.01em;
+  --button-radius: 2rem;
+  --bg-decoration: radial-gradient(
+      circle at 15% 20%,
+      rgba(167, 139, 250, 0.25),
+      transparent 40%
+    ),
+    radial-gradient(circle at 85% 15%, rgba(244, 114, 182, 0.18), transparent 45%),
+    radial-gradient(circle at 50% 90%, rgba(56, 189, 248, 0.16), transparent 45%);
+
+  --body-font: "Inter", sans-serif;
+  --heading-font: "Space Grotesk", sans-serif;
+  --mono-font: "JetBrains Mono", monospace;
+}
+[data-theme="liquid-glass"] .header {
+  background-color: rgba(13, 14, 26, 0.55);
+  backdrop-filter: blur(16px) saturate(150%);
+}
+[data-theme="liquid-glass"] .about__box:hover,
+[data-theme="liquid-glass"] .work__card:hover,
+[data-theme="liquid-glass"] .contact__card:hover,
+[data-theme="liquid-glass"] .services__content:hover {
+  border-color: rgba(167, 139, 250, 0.4);
+  box-shadow: 0 10px 40px rgba(167, 139, 250, 0.2);
+}
+
+/*=============== 4. BENTO LAB ===============*/
+[data-theme="bento-lab"] {
+  --title-color: #eef1ee;
+  --title-color-dark: #ffffff;
+  --text-color: #9aa39a;
+  --body-color: #101113;
+  --container-color: #17181b;
+  --accent: #6ee7b7;
+  --accent-2: #34d399;
+
+  --card-border: 1px solid rgba(110, 231, 183, 0.14);
+  --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  --card-bg: #17181b;
+  --card-backdrop: none;
+  --card-radius: 1.25rem;
+  --img-ring: rgba(110, 231, 183, 0.2);
+  --heading-transform: none;
+  --heading-tracking: -0.01em;
+  --button-radius: 0.85rem;
+
+  --body-font: "Geist", "Inter", sans-serif;
+  --heading-font: "Geist", "Inter", sans-serif;
+  --mono-font: "Geist Mono", monospace;
+}
+[data-theme="bento-lab"] .about__box,
+[data-theme="bento-lab"] .services__content,
+[data-theme="bento-lab"] .work__card,
+[data-theme="bento-lab"] .contact__card {
+  transition: transform 0.3s, border-color 0.3s;
+}
+[data-theme="bento-lab"] .about__box:hover,
+[data-theme="bento-lab"] .services__content:hover,
+[data-theme="bento-lab"] .work__card:hover,
+[data-theme="bento-lab"] .contact__card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+}
+[data-theme="bento-lab"] .skills__container {
+  grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));
+  grid-auto-rows: 96px;
+  max-width: 760px;
+  margin: 0 auto;
+  gap: 1rem;
+}
+[data-theme="bento-lab"] .skills__card {
+  background: var(--card-bg);
+  border: var(--card-border);
+  border-radius: var(--card-radius);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+}
+[data-theme="bento-lab"] .skills__card:nth-child(5n+1) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+[data-theme="bento-lab"] .skills__card-image {
+  width: 42px;
+  height: 42px;
+}
+[data-theme="bento-lab"] .skills__card:nth-child(5n+1) .skills__card-image {
+  width: 64px;
+  height: 64px;
+}
+[data-theme="bento-lab"] .services__container {
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 900px;
+  margin: 0 auto;
+}
+[data-theme="bento-lab"] .services__content:first-child {
+  grid-column: span 2;
+}
+[data-theme="bento-lab"] .work__conatiner {
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  max-width: 940px;
+  margin: 0 auto;
+}
+[data-theme="bento-lab"] .work__card:first-child {
+  grid-column: span 2;
+}
+[data-theme="bento-lab"] .work__card:first-child .work__img {
+  width: 100%;
+  height: 220px;
+}
+@media screen and (max-width: 768px) {
+  [data-theme="bento-lab"] .services__container {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 620px;
+  }
+  [data-theme="bento-lab"] .work__conatiner {
+    grid-template-columns: repeat(2, minmax(140px, 1fr));
+  }
+}
+@media screen and (max-width: 576px) {
+  [data-theme="bento-lab"] .skills__container {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    grid-auto-rows: 80px;
+  }
+  [data-theme="bento-lab"] .services__container,
+  [data-theme="bento-lab"] .work__conatiner {
+    grid-template-columns: 1fr;
+  }
+  [data-theme="bento-lab"] .services__content:first-child,
+  [data-theme="bento-lab"] .work__card:first-child {
+    grid-column: span 1;
+  }
+}
+
+/*=============== 5. BRUTALIST MONO ===============*/
+[data-theme="brutalist-mono"] {
+  --title-color: #ffffff;
+  --title-color-dark: #ffffff;
+  --text-color: #cfcfcf;
+  --body-color: #000000;
+  --container-color: #000000;
+  --accent: #eaff00;
+  --accent-2: #ff3cac;
+
+  --card-border: 3px solid #ffffff;
+  --card-shadow: 6px 6px 0 var(--accent);
+  --card-bg: #000000;
+  --card-backdrop: none;
+  --card-radius: 0;
+  --img-ring: transparent;
+  --heading-transform: uppercase;
+  --heading-tracking: 0.01em;
+  --button-radius: 0;
+  --transition-speed: 0.15s;
+
+  --body-font: "Space Mono", monospace;
+  --heading-font: "Space Mono", monospace;
+  --mono-font: "Space Mono", monospace;
+}
+[data-theme="brutalist-mono"] .button {
+  background-color: var(--accent);
+  color: #000000;
+  border: 3px solid #ffffff;
+  box-shadow: 5px 5px 0 #ffffff;
+}
+[data-theme="brutalist-mono"] .button:hover {
+  transform: translate(3px, 3px);
+  box-shadow: 2px 2px 0 #ffffff;
+  background-color: var(--accent);
+}
+[data-theme="brutalist-mono"] .about__img,
+[data-theme="brutalist-mono"] .work__img {
+  border-radius: 0;
+  border: 3px solid #ffffff;
+}
+[data-theme="brutalist-mono"] .home__img {
+  border-radius: 0 !important;
+  animation: none !important;
+  border: 4px solid #ffffff;
+}
+[data-theme="brutalist-mono"] .work__card:hover,
+[data-theme="brutalist-mono"] .about__box:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 9px 9px 0 var(--accent);
+}
+[data-theme="brutalist-mono"] .scrollup,
+[data-theme="brutalist-mono"] .footer__social-link {
+  border-radius: 0;
+  border: 2px solid #ffffff;
+}
+
+/*=============== 6. AURORA GRADIENT ===============*/
+[data-theme="aurora-gradient"] {
+  --title-color: #f5f3ff;
+  --title-color-dark: #ffffff;
+  --text-color: #b6b2d6;
+  --body-color: #0b0a14;
+  --container-color: #15132880;
+  --accent: #2dd4bf;
+  --accent-2: #a855f7;
+
+  --card-border: 1px solid rgba(255, 255, 255, 0.09);
+  --card-shadow: 0 8px 30px rgba(45, 212, 191, 0.08);
+  --card-bg: rgba(255, 255, 255, 0.03);
+  --card-backdrop: blur(6px);
+  --card-radius: 1.25rem;
+  --img-ring: rgba(255, 255, 255, 0.15);
+  --heading-transform: none;
+  --heading-tracking: -0.01em;
+  --button-radius: 1.5rem;
+  --bg-decoration: radial-gradient(
+      ellipse at 20% 10%,
+      rgba(168, 85, 247, 0.22),
+      transparent 45%
+    ),
+    radial-gradient(ellipse at 80% 30%, rgba(45, 212, 191, 0.18), transparent 45%),
+    radial-gradient(ellipse at 50% 100%, rgba(59, 130, 246, 0.16), transparent 50%);
+  background-size: 200% 200%;
+  animation: aurora-drift 18s ease-in-out infinite;
+
+  --body-font: "Inter", sans-serif;
+  --heading-font: "Bricolage Grotesque", sans-serif;
+  --mono-font: "JetBrains Mono", monospace;
+}
+[data-theme="aurora-gradient"] .about__box:hover,
+[data-theme="aurora-gradient"] .work__card:hover,
+[data-theme="aurora-gradient"] .contact__card:hover,
+[data-theme="aurora-gradient"] .services__content:hover {
+  box-shadow: 0 8px 32px rgba(168, 85, 247, 0.25);
+  border-color: rgba(45, 212, 191, 0.4);
+}
+
+/*=============== 7. CYBER LAVENDER ===============*/
+[data-theme="cyber-lavender"] {
+  --title-color: #f3e8ff;
+  --title-color-dark: #ffffff;
+  --text-color: #baa7d9;
+  --body-color: #0f0a1a;
+  --container-color: #1a1230;
+  --accent: #c084fc;
+  --accent-2: #f472b6;
+
+  --card-border: 1px solid rgba(192, 132, 252, 0.25);
+  --card-shadow: 0 0 24px rgba(192, 132, 252, 0.1);
+  --card-bg: #1a1230;
+  --card-backdrop: none;
+  --card-radius: 0.9rem;
+  --img-ring: rgba(192, 132, 252, 0.3);
+  --heading-transform: none;
+  --heading-tracking: 0;
+  --button-radius: 0.6rem;
+  --bg-decoration: linear-gradient(
+      rgba(192, 132, 252, 0.05) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(192, 132, 252, 0.05) 1px, transparent 1px);
+  background-size: 42px 42px, 42px 42px;
+
+  --body-font: "Inter", sans-serif;
+  --heading-font: "Sora", sans-serif;
+  --mono-font: "Space Mono", monospace;
+}
+[data-theme="cyber-lavender"] h1,
+[data-theme="cyber-lavender"] h2,
+[data-theme="cyber-lavender"] .home__title {
+  text-shadow: 0 0 18px rgba(192, 132, 252, 0.45);
+}
+[data-theme="cyber-lavender"] .button {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  color: #1a1230;
+}
+[data-theme="cyber-lavender"] .work__card:hover,
+[data-theme="cyber-lavender"] .about__box:hover,
+[data-theme="cyber-lavender"] .contact__card:hover,
+[data-theme="cyber-lavender"] .services__content:hover {
+  border-color: var(--accent-2);
+  box-shadow: 0 0 30px rgba(244, 114, 182, 0.2);
+}
+
+/*=============== 8. EDITORIAL MONO ===============*/
+[data-theme="editorial-mono"] {
+  --title-color: #f2ede4;
+  --title-color-dark: #ffffff;
+  --text-color: #ab9f8d;
+  --body-color: #121212;
+  --container-color: #1a1a1a;
+  --accent: #d4a574;
+  --accent-2: #e8c9a0;
+
+  --card-border: 1px solid rgba(212, 165, 116, 0.18);
+  --card-shadow: none;
+  --card-bg: transparent;
+  --card-backdrop: none;
+  --card-radius: 0.2rem;
+  --img-ring: rgba(212, 165, 116, 0.25);
+  --heading-transform: none;
+  --heading-tracking: 0;
+  --button-radius: 0.15rem;
+
+  --body-font: "Inter", sans-serif;
+  --heading-font: "Fraunces", serif;
+  --mono-font: "IBM Plex Mono", monospace;
+}
+[data-theme="editorial-mono"] .section__title,
+[data-theme="editorial-mono"] .section__subtitle {
+  text-align: left;
+}
+[data-theme="editorial-mono"] .section__title {
+  font-size: calc(var(--h1-font-size) * 1.35);
+  border-bottom: 1px solid rgba(212, 165, 116, 0.25);
+  padding-bottom: 1rem;
+}
+[data-theme="editorial-mono"] .about__container,
+[data-theme="editorial-mono"] .contact__container {
+  text-align: left;
+}
+[data-theme="editorial-mono"] .home__title {
+  font-size: calc(var(--big-font-size) * 1.05);
+}
+[data-theme="editorial-mono"] .button {
+  background-color: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+[data-theme="editorial-mono"] .button:hover {
+  background-color: var(--accent);
+  color: #121212;
+}
+
+/*=============== 9. GRAPHITE PRO ===============*/
+[data-theme="graphite-pro"] {
+  --title-color: #f5f6f7;
+  --title-color-dark: #ffffff;
+  --text-color: #9aa0a6;
+  --body-color: #15171a;
+  --container-color: #1c1f23;
+  --accent: #5b9dfb;
+  --accent-2: #7cb8ff;
+
+  --card-border: 1px solid rgba(255, 255, 255, 0.07);
+  --card-shadow: 0 2px 14px rgba(0, 0, 0, 0.4);
+  --card-bg: #1c1f23;
+  --card-backdrop: none;
+  --card-radius: 0.85rem;
+  --img-ring: rgba(91, 157, 251, 0.18);
+  --heading-transform: none;
+  --heading-tracking: -0.01em;
+  --button-radius: 0.6rem;
+
+  --body-font: "Inter", sans-serif;
+  --heading-font: "Geist", "Inter", sans-serif;
+  --mono-font: "IBM Plex Mono", monospace;
+}
+[data-theme="graphite-pro"] .about__box:hover,
+[data-theme="graphite-pro"] .work__card:hover,
+[data-theme="graphite-pro"] .contact__card:hover,
+[data-theme="graphite-pro"] .services__content:hover {
+  border-color: rgba(91, 157, 251, 0.4);
+}
+
+/*=============== 10. DEEP SPACE RETRO ===============*/
+[data-theme="deep-space-retro"] {
+  --title-color: #f5e6d3;
+  --title-color-dark: #ffffff;
+  --text-color: #b8a88f;
+  --body-color: #0c0a08;
+  --container-color: #17130f;
+  --accent: #f97316;
+  --accent-2: #fbbf24;
+
+  --card-border: 1px solid rgba(249, 115, 22, 0.2);
+  --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  --card-bg: #17130f;
+  --card-backdrop: none;
+  --card-radius: 0.4rem;
+  --img-ring: rgba(249, 115, 22, 0.25);
+  --heading-transform: uppercase;
+  --heading-tracking: 0.03em;
+  --button-radius: 0.3rem;
+  --bg-decoration: repeating-linear-gradient(
+      0deg,
+      rgba(249, 115, 22, 0.02) 0px,
+      transparent 1px,
+      transparent 3px
+    ),
+    radial-gradient(ellipse at 50% 0%, rgba(249, 115, 22, 0.08), transparent 60%);
+
+  --body-font: "IBM Plex Mono", monospace;
+  --heading-font: "Space Mono", monospace;
+  --mono-font: "Space Mono", monospace;
+}
+[data-theme="deep-space-retro"] .section__title::before {
+  content: "* ";
+  color: var(--accent);
+}
+[data-theme="deep-space-retro"] .button {
+  background-color: var(--accent);
+  color: #17130f;
+}
+[data-theme="deep-space-retro"] .work__card:hover,
+[data-theme="deep-space-retro"] .about__box:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 24px rgba(249, 115, 22, 0.2);
+}
